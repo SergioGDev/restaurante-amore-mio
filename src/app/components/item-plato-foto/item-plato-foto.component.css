@@ -1,0 +1,40 @@
+.item-plato{
+    border: 1px solid var(--color-dorado-oscuro);
+    margin: 10px;
+    box-shadow: 2px 2px 5px;
+    padding: 5px;
+    border-radius: 2px;
+    font-family: 'Cairo', sans-serif;
+    color: var(--color-negro-fondo);
+    background-color: white;
+    padding: 15px 5px;
+}
+
+.nombre-plato {
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.descripcion-plato {
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.container-descripcion {
+    margin-left: 10px;
+}
+
+.marco-foto-item-plato {
+    border-right: 5px;
+}
+
+.precio-plato {
+    font-size: 16px;
+    margin-top: 3px;
+    color: var(--color-dorado-oscuro);
+}
+
+.foto-item-plato {
+    width: 100%;
+    border-radius: 100%;
+}

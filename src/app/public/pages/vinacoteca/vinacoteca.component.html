@@ -1,0 +1,110 @@
+<div class="container">
+
+    <!-- Panel superior con el título de la sección -->
+    <div class="panel-superior">
+        <div class="cortina-transparente">
+
+            <div class="titulo-container" fxLayoutAlign="center" fxLayout="column">
+                <div class="titulo animate__animated animate__fadeIn" fxFlex="100">
+                    Nuestros vinos
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bodega Encina Blanca -->
+    <div class="titulo-carta">
+        <span class="animate__animated animate__fadeIn animate__delay-1s">{{ tEncinaBlanca }}</span>
+    </div>
+
+    <div class="carta" fxLayout="row wrap" fxLayoutAlign="center">
+        <div fxFlex="40" fxFlex.xs="98" *ngFor="let item of vEncinaBlanca">
+            <app-item-vinacoteca [item]="item"></app-item-vinacoteca>
+        </div>
+    </div>
+    
+    <!-- Extremadura -->
+    <div class="titulo-carta">
+        <span class="animate__animated animate__fadeIn animate__delay-1s">{{ tExtremadura }}</span>
+    </div>
+
+    <div class="carta" fxLayout="row wrap" fxLayoutAlign="center">
+        <div fxFlex="40" fxFlex.xs="98" *ngFor="let item of vExtremadura">
+            <app-item-vinacoteca [item]="item"></app-item-vinacoteca>
+        </div>
+    </div>
+
+    <!-- Ribera del Duero -->
+    <div class="titulo-carta">
+        <span class="animate__animated animate__fadeIn animate__delay-1s">{{ tRiberaDuero }}</span>
+    </div>
+
+    <div class="carta" fxLayout="row wrap" fxLayoutAlign="center">
+        <div fxFlex="40" fxFlex.xs="98" *ngFor="let item of vRiberaDuero">
+            <app-item-vinacoteca [item]="item"></app-item-vinacoteca>
+        </div>
+    </div>
+
+    <!-- Rioja -->
+    <div class="titulo-carta">
+        <span class="animate__animated animate__fadeIn animate__delay-1s">{{ tRioja }}</span>
+    </div>
+
+    <div class="carta" fxLayout="row wrap" fxLayoutAlign="center">
+        <div fxFlex="40" fxFlex.xs="98" *ngFor="let item of vRioja">
+            <app-item-vinacoteca [item]="item"></app-item-vinacoteca>
+        </div>
+    </div>
+
+    <!-- Otras denominaciones -->
+    <div class="titulo-carta">
+        <span class="animate__animated animate__fadeIn animate__delay-1s">{{ tOtrasDenominaciones }}</span>
+    </div>
+
+    <div class="carta" fxLayout="row wrap" fxLayoutAlign="center">
+        <div fxFlex="40" fxFlex.xs="98" *ngFor="let item of vOtrasDenominaciones">
+            <app-item-vinacoteca [item]="item"></app-item-vinacoteca>
+        </div>
+    </div>
+
+    <!-- Blancos / Verdejos / Albariños -->
+    <div class="titulo-carta">
+        <span class="animate__animated animate__fadeIn animate__delay-1s">{{ tBlancosVerdejosAlbarinnos }}</span>
+    </div>
+
+    <div class="carta" fxLayout="row wrap" fxLayoutAlign="center">
+        <div fxFlex="40" fxFlex.xs="98" *ngFor="let item of vBlancosVerdejosAlbarinnos">
+            <app-item-vinacoteca [item]="item"></app-item-vinacoteca>
+        </div>
+    </div>
+
+    <!-- Espumosos y sobremesas -->
+    <div class="titulo-carta">
+        <span class="animate__animated animate__fadeIn animate__delay-1s">{{ tEspumososSobremesa }}</span>
+    </div>
+
+    <div class="carta" fxLayout="row wrap" fxLayoutAlign="center">
+        <div fxFlex="40" fxFlex.xs="98" *ngFor="let item of vEspumososSobremesa">
+            <app-item-vinacoteca [item]="item"></app-item-vinacoteca>
+        </div>
+    </div>
+
+    <!-- Paseante -->
+    <div class="titulo-carta">
+        <span class="animate__animated animate__fadeIn animate__delay-1s">{{ tPaseante }}</span>
+    </div>
+
+    <div class="carta" fxLayout="row wrap" fxLayoutAlign="center">
+        <div fxFlex="40" fxFlex.xs="98" *ngFor="let item of vPaseante">
+            <app-item-vinacoteca [item]="item"></app-item-vinacoteca>
+        </div>
+    </div>
+
+    
+
+    <!-- Footer -->
+    <app-footer></app-footer>
+    
+</div>

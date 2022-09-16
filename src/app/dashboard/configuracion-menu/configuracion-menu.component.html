@@ -1,0 +1,66 @@
+<div class="container">
+
+    <div class="title-container">
+        Configuración del menú
+    </div>
+
+    <div class="subtitle-container">
+        Gestión de Secciones
+    </div>
+
+    <div class="table-content" *ngIf="vSecciones.length > 0">
+        <form [formGroup]="nuevaSeccionForm">
+            <table>
+                <tbody>
+                    <tr *ngFor="let fila of vSecciones" fxLayout="">
+                        <td> {{ fila.nombre }} </td>
+                        <td> {{ fila.submensaje }} </td>
+                        <td> </td>
+                    </tr>
+                    <tr id="row-nueva-seccion" *ngIf="annadiendoSeccion">
+                        <td>
+                            <input type="text" formControlName="nombre" placeholder="Nombre..." />
+                        </td>
+                        <td>
+                            <input type="text" formControlName="submensaje"
+                                placeholder="Mensaje descriptivo... (Opcional)" />
+                        </td>
+                        <td>
+                            <button class="button-icon" mat-icon-button (click)="guardarSeccion()">
+                                <mat-icon>save</mat-icon>
+                            </button>
+                            <button class="button-icon" mat-icon-button (click)="cerrarGuardar()">
+                                <mat-icon>close</mat-icon>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+    
+                <thead>
+                    <tr>
+                        <th> Nombre </th>
+                        <th> Submensaje </th>
+                        <th> Acciones </th>
+                    </tr>
+                </thead>
+            </table>
+        </form>
+    </div>
+
+    <div class="registro-content" *ngIf="!annadiendoSeccion">
+        <button class="button-class" (click)="annadiendoSeccion = true">AÑADIR SECCIÓN</button>
+    </div>
+
+    
+    <div class="subtitle-container">
+        Gestión del menú
+    </div>
+    
+    <div class="table-content">
+        
+    </div>
+
+    <div class="registro-content">
+        <button class="button-class">EDITAR MENÚ</button>
+    </div>
+</div>

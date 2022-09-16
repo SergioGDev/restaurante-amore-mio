@@ -1,0 +1,22 @@
+/* Favoritos del chef */
+.borde-top-favoritos-chef-titulo {
+    height: 10px;
+    margin-top: -20px;
+    background: linear-gradient(to bottom, transparent, var(--color-negro-fondo));
+}
+
+.favoritos-chef-titulo {
+    background-color: var(--color-negro-fondo);
+    color: white;
+    text-shadow: 1px 2px 3px var(--color-texto-blanco);
+    font-size: 30px;
+    font-weight: 500;
+    padding: 25px;
+    text-align: center;
+    font-family: 'Merienda', sans-serif;
+}
+
+.borde-bottom-favoritos-chef-titulo {
+    height: 10px;
+    background: linear-gradient(to top, var(--color-fondo-claro), var(--color-negro-fondo));
+}

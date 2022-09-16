@@ -1,0 +1,20 @@
+<div class="container animate__animated animate__fadeInUp animate__delay-2s">
+    <div class="borde-superior"></div>
+
+    <div class="item-plato" fxLayout="row wrap">
+
+        <div fxFlex="80" class="nombre-plato">
+            <span class="nombre-plato">{{ itemPlato.nombre }}</span>
+            <span class="descripcion-plato" [fxShow]="itemPlato.submensaje">
+                ({{ itemPlato.submensaje }})
+            </span>
+        </div>
+
+        <div fxFlex="20" class="precio-plato">
+            {{ itemPlato.precio | number:'1.2-2' }} €
+        </div>
+
+    </div>
+
+    <div class="borde-inferior"></div>
+</div>

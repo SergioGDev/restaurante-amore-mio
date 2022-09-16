@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root {
+    /* --color-dorado: rgb(234, 190, 63); */
+    /* --color-dorado-oscuro: rgb(200, 150, 0); */
+    --color-dorado: #31572c;
+    --color-dorado-oscuro: #132a13;
+    --color-fondo-claro: #ecf39ebb;
+    --color-texto-blanco: rgb(240, 255, 230);
+    --color-negro-fondo: rgb(38, 38, 38);
+    --color-gris-fondo: rgb(65, 65, 65);
+    --animate-delay: 0.25s;
+
+    --tono1: #132a13;
+    --tono2: #31572c;
+    --tono3: #4f772d;
+    --tono4: #90a955;
+    --tono5: #ecf39e;
+    --tono6: #fdffea;
+    --tono5-transparente: #ecf38e1c;
+    --tono-box-shadow: #00000050;
+
+}

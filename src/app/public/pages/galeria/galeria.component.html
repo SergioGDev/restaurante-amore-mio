@@ -1,0 +1,29 @@
+<div class="container">
+
+    <!-- Panel superior con el título de la sección -->
+    <div class="panel-superior">
+        <div class="cortina-transparente">
+
+            <div class="titulo-container" fxLayoutAlign="center" fxLayout="column">
+                <div class="titulo animate__animated animate__fadeIn" fxFlex="100">
+                    Galería de fotos
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Galería de fotos -->
+    <div class="galeria-fotos" fxLayout="row wrap" fxLayoutAlign="center">
+        <div class="item-foto" *ngFor="let item of gallery" fxFlex="27" fxFlex.xs="70">
+            <div class="marco-exterior"> 
+                <div class="marco-interior">
+                    <img [src]="item.marco" [alt]="item.alt" (click)="openDialog(item.position)" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+
+</div>

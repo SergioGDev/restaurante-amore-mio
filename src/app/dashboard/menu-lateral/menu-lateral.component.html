@@ -1,0 +1,29 @@
+<div class="container">
+
+    <div class="navigation" [ngClass]="{ 'comprimido': comprimido }">
+        <ul>
+            <li *ngFor="let enlace of enlaces"
+                [routerLink]="enlace.path"
+                routerLinkActive="hovered">
+                <span>
+                    <!-- <i [classList]="enlace.icono"></i> -->
+                    <mat-icon class="icon">{{ enlace.icono }}</mat-icon>
+                    <span class="title"> {{ enlace.text }} </span>
+                </span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="toolbar" [ngClass]="{ 'comprimido': comprimido }">
+        <mat-icon class="icon" (click)="comprimido = !comprimido">menu</mat-icon>
+    </div>
+
+    <div class="content" [ngClass]="{ 'comprimido': comprimido }">
+
+        <router-outlet></router-outlet>
+
+    </div>
+
+</div>
+
+

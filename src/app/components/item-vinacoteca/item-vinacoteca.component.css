@@ -1,0 +1,50 @@
+.item-vino{
+    margin: 10px;
+    box-shadow: 1px 1px 5px var(--tono-box-shadow);
+    padding: 5px;
+    border-radius: 2px;
+    font-family: 'Cairo', sans-serif;
+    color: var(--color-negro-fondo);
+    background-color: white;
+    padding: 15px 5px;
+}
+
+.nombre-vino {
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 20px;
+}
+
+.descripcion-vino {
+    font-weight: 100;
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 16px;
+}
+
+.container-descripcion {
+    margin-left: 10px;
+}
+
+.marco-foto-item-vino {
+    border-right: 5px;
+    background-color: white;
+    border-radius: 2px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.precio-vino {
+    font-size: 18px;
+    margin-top: 3px;
+    color: var(--color-dorado-oscuro);
+}
+
+.foto-item-vino {
+    height: 100%;
+}

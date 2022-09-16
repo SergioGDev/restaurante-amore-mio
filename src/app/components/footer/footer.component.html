@@ -1,0 +1,40 @@
+<div class="container" fxLayout="column">
+
+    <div class="superior" fxLayout="row wrap" fxLayoutAlign="center center">
+        <div class="direccion datos" ngClass.xs="mt20" ngClass.sm="mt20" fxFlex="33" fxFlex.sm="49" fxFlex.xs="98">
+            <span>Plaza Mayor, 28</span>
+            <span class="mb10">10600 Plasencia (Cáceres)</span>
+
+            <span class="mb10"><img src="../../../assets/llamada-telefonica-blanco.svg"/> 6XX XXX XXX</span>
+            <span><img src="../../../assets/email-blanco.svg"/> info@restauranteamoremio.com</span>
+        </div>
+        
+        <div class="icono-restaurante datos" fxFlex="33" fxFlex.sm="49" fxFlex.xs="98">
+            <img src="../../../assets/logo-restaurante-sin-copy.png" />
+        </div>
+        
+            <div class="horario datos" ngClass.xs="mb20" ngClass.sm="mb20 mt20" fxFlex="33" fxFlex.sm="98" fxFlex.xs="98">
+                <span class="mb10">Abrimos de lunes a domingo</span>
+                <span>Desde las 7:30 de la mañana</span>
+                <span>Hasta la 1:00 de la noche</span>
+            </div>
+    </div>
+    
+
+    <div class="redes-sociales">
+        <app-barra-redes-sociales></app-barra-redes-sociales>
+    </div>
+
+    <div class="enlaces-contenido-legal" fxLayout="row wrap" fxLayout.xs="column" fxFlexAlign="center">
+        <span class="enlace-legal" *ngFor="let enlace of enlacesLegales"
+            [routerLink]="enlace.path">
+            {{ enlace.text }}
+        </span>
+    </div>
+
+</div>
+
+<div class="developer">
+   © 2022 Restaurante Amore Mio. Desarrollado por 
+   <span class="enlace-developer"><a href="https://sergiogdev.com/" target="_blank">SergioGDev</a></span> 
+</div>

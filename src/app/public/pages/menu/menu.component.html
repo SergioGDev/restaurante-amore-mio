@@ -1,0 +1,96 @@
+<div class="container">
+
+    <!-- Panel superior con el título de la sección -->
+    <div class="panel-superior">
+        <div class="cortina-transparente">
+
+            <div class="titulo-container" fxLayoutAlign="center" fxLayout="column">
+                <div class="titulo animate__animated animate__fadeIn" fxFlex="100">
+                    Nuestra carta
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div [ngClass]="{'barra-menu-scrolled': this.scrollable, 'barra-menu-normal': !this.scrollable}"
+        fxLayout.xs="column">
+        <div *ngFor="let item of vSecciones"
+            [ngClass]="{'menu-item-scrolled': this.scrollable, 'menu-item-normal': !this.scrollable, 
+                'link-selected': this.tituloSeleccionado === item }"
+            (click)="this.tituloSeleccionado = item">
+                {{ item }}
+        </div>
+    </div>
+
+    <div></div>
+
+    <!-- Entrantes -->
+    <div class="titulo-carta" *ngIf="tituloSeleccionado === tituloEntrantes">
+        <span class="animate__animated animate__fadeIn animate__delay-1s">{{ tituloEntrantes }}</span>
+    </div>
+
+    <div class="carta" fxLayout="row wrap" fxLayoutAlign="center" *ngIf="tituloSeleccionado === tituloEntrantes">
+        <div fxFlex="60" fxFlex.xs="98" *ngFor="let item of vEntrantes">
+            <app-item-plato [itemPlato]="item"></app-item-plato>
+        </div>
+    </div>
+
+    <!-- Carnes -->
+    <div class="titulo-carta" *ngIf="tituloSeleccionado === tituloCarnes">
+        <span class="animate__animated animate__fadeIn animate__delay-1s">{{ tituloCarnes }}</span>
+    </div>
+
+    <div class="carta" fxLayout="row wrap" fxLayoutAlign="center" *ngIf="tituloSeleccionado === tituloCarnes">
+        <div fxFlex="60" fxFlex.xs="98" *ngFor="let item of vCarnes">
+            <app-item-plato [itemPlato]="item"></app-item-plato>
+        </div>
+    </div>
+
+    <!-- Arroces -->
+    <div class="titulo-carta" *ngIf="tituloSeleccionado === tituloArroces">
+        <span class="animate__animated animate__fadeIn animate__delay-1s">{{ tituloArroces }}</span>
+    </div>
+    
+    <div class="subtitulo" *ngIf="tituloSeleccionado === tituloArroces">
+        <span class="animate__animated animate__fadeIn">Tiempo de elaboración: 40 minutos para dos personas.</span>
+    </div>
+
+    <div class="carta" fxLayout="row wrap" fxLayoutAlign="center" *ngIf="tituloSeleccionado === tituloArroces">
+        <div fxFlex="60" fxFlex.xs="98" *ngFor="let item of vArroces">
+            <app-item-plato [itemPlato]="item"></app-item-plato>
+        </div>
+    </div>
+
+    <!-- Pescados -->
+    <div class="titulo-carta" *ngIf="tituloSeleccionado === tituloPescados">
+        <span class="animate__animated animate__fadeIn animate__delay-1s">{{ tituloPescados }}</span>
+    </div>
+
+    <div class="carta" fxLayout="row wrap" fxLayoutAlign="center" *ngIf="tituloSeleccionado === tituloPescados">
+        <div fxFlex="60" fxFlex.xs="98" *ngFor="let item of vPescados">
+            <app-item-plato [itemPlato]="item"></app-item-plato>
+        </div>
+    </div>
+
+    <!-- Postres -->
+    <div class="titulo-carta" *ngIf="tituloSeleccionado === tituloPostres">
+        <span class="animate__animated animate__fadeIn animate__delay-1s">{{ tituloPostres }}</span>
+    </div>
+
+    <div class="subtitulo" *ngIf="tituloSeleccionado === tituloPostres">
+        <span class="animate__animated animate__fadeIn">Pregunta por nuestra carta de helados</span>
+    </div>
+
+
+    <div class="carta" fxLayout="row wrap" fxLayoutAlign="center" *ngIf="tituloSeleccionado === tituloPostres">
+        <div fxFlex="60" fxFlex.xs="98" *ngFor="let item of vPostres">
+            <app-item-plato [itemPlato]="item"></app-item-plato>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <app-footer></app-footer>
+    
+</div>

@@ -1,0 +1,145 @@
+/* Panel superior */
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.panel-superior {
+    width: 100%;
+    background-image: url("../../../../assets/foto-restaurante-1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.cortina-transparente {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nombre-restaurante, .localizacion-restaurante {
+    display: block;
+    width: 100%;
+    font-weight: 300;
+    text-align: center;
+    line-height: 50px;
+    z-index: 10;
+    font-family: 'Merienda', sans-serif;
+    color: white;
+}
+
+.nombre-restaurante {
+    padding-top: 300px;
+    font-size: 45px;
+    font-weight: 900;
+}
+
+.localizacion-restaurante {
+    font-size: 30px;
+    font-weight: 100;
+    margin-top: 50px;
+    padding-bottom: 120px;
+}
+
+/* Descripción restaurante */
+.descripcion-restaurante {
+    margin-bottom: 10px;
+    padding: 40px 0px;
+    background-color: var(--tono5-transparente);
+}
+
+.dibujo-restaurante {
+    padding: 30px;
+    text-align: center;
+}
+
+.dibujo-restaurante img {
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 1px 2px 3px var(--tono-box-shadow);
+}
+
+.texto-restaurante {
+    padding: 30px;
+}
+
+.texto-restaurante div {
+    margin-bottom: 10px;
+    font-family: 'Cairo', serif;
+}
+
+.texto-restaurante .titulo {
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: 900;
+    color: var(--color-dorado);
+}
+
+
+.texto-restaurante .subtitulo {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: var(--color-dorado);
+}
+
+
+.texto-restaurante .texto {
+    font-size: 14px;
+}
+
+/* Favoritos del chef */
+.borde-top-favoritos-chef-titulo {
+    height: 20px;
+    background: linear-gradient(to bottom, transparent, var(--color-negro-fondo));
+}
+
+.favoritos-chef-titulo {
+    background-color: var(--color-negro-fondo);
+    color: white;
+    text-shadow: 1px 2px 3px #f0ffe680;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 25px;
+    text-align: center;
+    font-family: 'Merienda', sans-serif;
+}
+
+.borde-bottom-favoritos-chef-titulo {
+    height: 20px;
+    background: linear-gradient(to top, var(--color-fondo-claro), var(--color-negro-fondo));
+}
+
+.ver-menu-completo-container {
+    padding: 30px 10px 50px 10px;
+    text-align: center;
+    display: block;   
+}
+
+.favoritos-chef, .ver-menu-completo-container {
+    background-color: var(--color-fondo-claro);
+    padding-top: 40px;
+}
+
+.ver-menu-completo {
+    padding: 18px 40px;
+    border: 2px solid var(--color-dorado-oscuro);
+    border-radius: 2px;
+    color: var(--color-dorado-oscuro);
+    font-family: 'Merienda', sans-serif;
+    font-size: 15px;
+    font-variant: small-caps;
+    display: inline-block;
+    transition: 0.1s all linear;
+    cursor: pointer;
+    background-color: white;
+}
+
+.ver-menu-completo:hover {
+    background-color: var(--color-dorado-oscuro);
+    color: white;
+    border: 2px solid var(--color-negro-fondo);
+    transition: 0.1s all linear;
+    /* box-shadow: 1px 1px 5px; */
+}

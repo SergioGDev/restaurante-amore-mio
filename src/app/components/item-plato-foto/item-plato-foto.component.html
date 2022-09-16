@@ -1,0 +1,20 @@
+<div class="item-plato animate__animated animate__fadeInUp animate__delay-2s" fxLayout="row wrap">
+    <div fxFlex="25" class="marco-foto-item-plato">
+        <img [src]="itemPlato.pathFoto" class="foto-item-plato"/>
+    </div>
+    
+    <div fxFlex="70" class="container-descripcion">
+        <div class="nombre-plato">
+            <span class="nombre-plato">{{ itemPlato.nombre }}</span>
+            <span class="descripcion-plato" [fxShow]="itemPlato.submensaje">
+                ({{ itemPlato.submensaje }})
+            </span>
+        </div>
+
+        <div class="precio-plato">
+            {{ itemPlato.precio | number:'1.2-2' }} €
+        </div>
+        
+    </div>
+
+</div>

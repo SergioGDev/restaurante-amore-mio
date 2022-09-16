@@ -1,0 +1,376 @@
+/****************************************/
+/*          TOOLBAR SUPERIOR            */
+/* AUTOR:   Sergio García Hernández     */
+/****************************************/
+
+/* Toolbar */
+.toolbar-normal, .toolbar-scrolled {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.toolbar-normal {
+    position: absolute;
+    height: 180px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));    
+    /* animation: toolbar-anim 0.3s ease-out; */
+    transition: height 0.3s ease-out, background 0.3s ease-in;
+}
+
+.toolbar-scrolled, .toolbar-responsive {
+    position: fixed;
+    height: 100px;
+    /* animation: toolbar-anim 0.3s reverse; */
+    background-color: var(--color-negro-fondo);
+    transition: height 0.3s ease-out 0.1s, background 0.3s ease-in;
+}
+
+/* Barra de enlaces */
+.barra-enlaces-normal, .barra-enlaces-scrolled {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    text-align: center;
+    color: var(--color-texto-blanco);
+    background-color: transparent;
+}
+
+.barra-enlaces-normal {
+    padding-top: 120px;
+}
+
+.barra-enlaces-scrolled {
+    padding-top: 30px;
+}
+
+.barra-enlaces-responsive {
+    display: none;
+}
+
+/* Toolbar item */
+.toolbar-item-normal, .toolbar-item-scrolled {
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-family: 'Cairo', serif;
+    transition: border 0.2s ease-in right;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.toolbar-item-normal {
+    margin: 0px 5px;
+    animation: toolbar-item-anim;
+    /* -webkit-animation: 1s toolbar-item-anim;
+    -moz-animation: 1s toolbar-item-anim; */
+    transition: margin 0.3s;
+}
+
+.toolbar-item-scrolled {
+    margin: 0px 1px;
+    /* -moz-animation: 1s toolbar-item-anim reverse;
+    -webkit-animation: 1s toolbar-item-anim reverse; */
+    animation: toolbar-item-anim reverse;
+    transition: margin 0.3s ease-out;
+}
+
+.toolbar-item-normal::after, .toolbar-item-scrolled::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--tono5);
+    transition: width .3s;
+    margin-top: 5px;
+}
+
+.link-selected::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--tono4);
+    margin-top: 5px;
+    width: 100%;
+}
+
+.toolbar-item-normal:hover::after, .toolbar-item-scrolled:hover::after {
+    width: 100%;
+}
+
+/* Icono restaurante */
+.icono-restaurante-normal, .icono-restaurante-scrollable, .icono-restaurante-responsive{
+    position: absolute;
+    top: 50px;
+}
+
+.icono-restaurante-normal, .icono-restaurante-scrollable {
+    left: 5%;
+}
+
+.icono-restaurante-responsive {
+    left: calc(50% - 41px);
+}
+
+.icono-restaurante-normal {
+    width: 200px;
+    top: 80px;
+    transition: width 0.3s ease-out;
+}
+
+.icono-restaurante-scrollable, .icono-restaurante-responsive {
+    width: 80px;
+    top: 8px;
+    transition: width 0.3s ease-out;
+}
+
+.icono-restaurante-normal img, .icono-restaurante-scrollable img, .icono-restaurante-responsive img{
+    height: 100%;
+    width: 100%;
+    border-radius: 2%;
+    border: 3px solid var(--color-dorado);
+    background-color: white;
+    transition: all 0.3s linear;
+}
+
+/* Barra de redes sociales */
+.redes-sociales-normal {
+    position: absolute;
+    top: 20px;
+    right: 5%;
+    left: 5%;
+    text-align: center;
+}
+
+.redes-sociales-scrolled {
+    display: none;
+}
+
+.redes-sociales-normal {
+    z-index: 5;
+}
+
+.icono-red-social {
+    width: 20px;
+    height: 20px;
+}
+
+.icono-red-social img{
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+
+.icono-red-social img:hover {
+    transition: all 1s ease-in-out;
+}
+
+/* Botón de reserva */
+.reservar-normal, .reservar-scrollable {
+    position: absolute;
+    right: 5%;
+    padding: 12px 20px;
+    background-color: var(--color-negro-fondo);
+    color: var(--color-texto-blanco);
+    border: 2px solid var(--tono5);
+    border-radius: 2%;
+    font-size: 16px;
+    font-family: 'Cairo', serif;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.reservar-normal {
+    background-color: transparent;
+    top: 115px; 
+    transition:  background-color 0.3s ease-out;
+}
+
+.reservar-normal:hover {
+    background-color: var(--color-negro-fondo);
+    transition: all 0.1s linear;
+}
+
+
+.reservar-scrollable {
+    background-color: var(--color-negro-fondo);
+    top: 25px;
+    transition: background-color 0.3s ease-out;
+}
+
+.reservar-scrollable:hover {
+    color: var(--color-negro-fondo);
+    background-color: var(--color-fondo-claro);
+    transition: all 0.1s linear;
+}
+
+/* Botón menú burguer */
+.content-boton-menu {
+    position: absolute;
+    display: flex;
+    top: 25px;
+    right: 25px;
+}
+
+.boton-menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.boton-menu-burguer {
+    width: 20px;
+    height: 3px;
+    background-color: var(--color-fondo-claro);
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.boton-menu-burguer::before, .boton-menu-burguer::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: var(--color-fondo-claro);
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.boton-menu-burguer::before {
+    transform: translateY(-8px);
+}
+
+.boton-menu-burguer::after {
+    transform: translateY(8px);
+}
+
+.boton-menu.open .boton-menu-burguer {
+    transform: translateX(-50px);
+    background: transparent;
+}
+
+.boton-menu.open .boton-menu-burguer::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.boton-menu.open .boton-menu-burguer::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.menu-responsive {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0%;
+    z-index: 500;
+    background-color: var(--tono5);
+    border-bottom: 2px solid var(--color-negro-fondo);
+}
+
+.menu-responsive.open {
+    padding-top: 40%;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.container.menu-opened {
+    display: none;
+}
+
+.toolbar-item-responsive {
+    display: none;
+}
+
+.toolbar-item-responsive.open {
+    display: block;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    padding: 15px 0px;
+    font-size: 20px;
+    color: var(--color-negro-fondo);
+}
+
+.link-responsive-selected {
+    text-decoration: underline;
+}
+
+.mat-divider {
+    display: block;
+    margin: 30px;
+    border-top-width: 1px;
+    background: var(--color-fondo-claro);
+    border-top-style: solid;
+}
+
+.redes-sociales-responsive {
+    text-align: center;
+}
+
+.display-none {
+    display: none;
+}
+
+/* Animaciones */
+@keyframes toolbar-item-anim {
+    0% { margin: 0px 10px; }
+    40% { margin: 0px 14px; }
+    100% { margin: 0px 2px; }
+}
+
+@keyframes toolbar-anim {
+    0% { height: 90px; }
+    100% { height: 100px; }
+}
+
+@keyframes icono-restaurante-anim {
+    0% { left: calc(50% - 75px) }
+    100% { left: 5% }
+}
+
+@keyframes toolbar-item-hover-anim {
+    0% { border-bottom: 0px solid var(--tono4);}
+    100% { border-bottom: 2px solid var(--tono4); }
+}
+
+@media screen and (max-width: 595px)  {
+    .toolbar {
+        padding: 0px 10px;
+    }
+
+    .menu-responsive.open {
+        padding-top: 40%;
+        height: 85%;
+    }
+}
+
+@media screen and (min-width: 597px) and (max-width: 959px) {
+    .toolbar {
+        padding: 0px 10px;
+    }
+
+    .menu-responsive.open {
+        padding-top: 20%;
+        height: 90%;
+    }
+}

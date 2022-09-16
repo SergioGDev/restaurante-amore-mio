@@ -1,0 +1,112 @@
+.container {
+    font-family: 'Cairo', sans-serif;
+}
+
+.title-container, .subtitle-container {
+    font-weight: 900;
+    text-shadow: 3px 2px 4px var(--tono-box-shadow);
+}
+
+.title-container {
+    font-size: 30pt;
+    margin: 5px;
+}
+
+.subtitle-container {
+    font-size: 18pt;
+    margin: 5px 20px;
+}
+
+.registro-content {
+    text-align: end;
+    margin: 10px 20px;
+}
+
+.registro-content button {
+    padding: 10px 20px;
+    background: var(--tono5);
+    color: var(--tono2);
+    border: 2px solid var(--tono2);
+    border-radius: 3px;
+    font-size: 11pt;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.4pt;
+    box-shadow: 1px 2px 3px var(--tono-box-shadow);
+    cursor: pointer;
+    width: 200px;
+    margin-top: 0;
+    transition: 0.1s;
+}
+
+.registro-content button:hover {
+    background: var(--tono2);
+    color: var(--tono5);
+    transition: 0.1s;
+}
+
+.registro-content button:active {
+    transform: translate(1px, 1px);
+    box-shadow: 0px 0px 3px var(--tono-box-shadow);
+    color: var(--tono6);
+    transition: 0.1s;
+}
+
+.table-content table {
+    width: 100%;
+    background-color: var(--tono2);
+    border-radius: 3px;
+    box-shadow: 2px 2px 10px black;
+    margin: 15px 0px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.table-content table th {
+    border-bottom: 2px solid var(--tono6);
+    text-align: start;
+    padding: 10px;
+    background-color: var(--tono1);
+}
+
+.table-content table td {
+    border-bottom: 1px solid var(--tono5-transparente);
+    padding: 10px;
+    text-align: start;
+}
+
+.table-content table td {
+    border-right: 1px solid var(--tono5-transparente);
+    max-width: 500px;
+}
+
+.table-content table td:last-child {
+    border-right: 0;
+}
+
+.table-content table tr:nth-child(odd) {
+    background-color: var(--tono2);
+}
+
+.table-content table tr:nth-child(even) {
+    background-color: var(--tono3);
+}
+
+.table-content table tr#row-nueva-seccion td {
+    padding: 0px 10px 8px 10px;
+    text-align: center;
+}
+
+
+input {
+    color: white;
+}
+
+input::placeholder {
+    color: #FFFFFFBB;
+}
+
+.table-content table td, .table-content table th {
+    color: white;
+}
+

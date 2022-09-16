@@ -1,0 +1,22 @@
+.titulo {
+    font-weight: 900;
+    font-size: 26px;
+}
+
+.titulo, .telefono {
+    text-align: center;
+    font-family: 'Merienda', sans-serif;
+}
+
+.telefono {
+    font-size: 20px;
+    padding: 10px 25px;
+    border: 2px solid var(--color-dorado);
+    margin: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-dorado);
+    border: none
+}

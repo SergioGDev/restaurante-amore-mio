@@ -1,0 +1,22 @@
+<div class="item-vino animate__animated animate__fadeInUp animate__delay-2s" fxLayout="row wrap">
+    <div fxFlex="35" class="marco-foto-item-vino">
+        <img [src]="item.pathFoto" class="foto-item-vino"/>
+    </div>
+    
+    <div fxFlex="60" class="container-descripcion">
+        <div class="nombre-vino">
+            <div class="nombre-vino">
+                {{ item.nombre }}
+            </div>
+            <div class="descripcion-vino" [fxShow]="item.mensaje">
+                {{ item.mensaje }}
+            </div>
+        </div>
+
+        <div class="precio-vino">
+            {{ item.precio | number:'1.2-2' }} €
+        </div>
+        
+    </div>
+
+</div>

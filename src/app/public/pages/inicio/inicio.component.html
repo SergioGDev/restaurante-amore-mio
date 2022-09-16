@@ -1,0 +1,54 @@
+<div class="container">
+    <!-- Panel superior con nombre del restaurante y localización -->
+    <div class="panel-superior">
+        <div class="cortina-transparente">
+
+            <div class="nombre-container" fxLayoutAlign="center" fxLayout="column">
+                <div class="nombre-restaurante animate__animated animate__fadeIn" fxFlex="100">
+                    {{ nombreRestaurante }}
+                </div>
+            </div>
+    
+            <div class="localizacion-restaurante animate__animated animate__fadeIn">
+                {{ localizacion }}
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Descripcion restaurante -->
+    <div class="descripcion-restaurante" fxLayout="row wrap" fxLayoutAlign="center">
+
+        <div class="dibujo-restaurante animate__animated animate__fadeInLeft" fxFlexAlign="center" fxFlex="50" fxFlex.sm="100" fxFlex.xs="100">
+            <img src="../../../assets/foto-restaurante-3.jpg" />
+        </div>
+
+        <div class="texto-restaurante animate__animated animate__fadeInRight" fxFlex="50" fxFlex.sm="100" fxFlex.xs="100">
+            <div class="titulo">{{ this.descripcionTitulo }}</div>
+            <div class="subtitulo">{{ this.descripcionSubtitulo }} </div>
+            <div class="texto" *ngFor="let texto of descripcionTexto"> {{ texto }} </div>
+
+        </div>
+        
+    </div>
+
+    <app-barra-titulo [titulo]="tituloFavoritosChef"></app-barra-titulo>
+
+    <div class="favoritos-chef" fxLayout="row wrap" fxLayoutAlign="center">
+        <div fxFlex="60" fxFlex.xs="98"
+            *ngFor="let item of vPlatos">
+            <app-item-plato [itemPlato]="item"></app-item-plato>
+        </div>
+
+    </div>
+    
+    <div class="ver-menu-completo-container">
+        <div class="ver-menu-completo" routerLink="/menu">
+            Ver menú completo
+        </div>
+    </div>
+   
+    <!-- Footer -->
+    <app-footer></app-footer>
+
+</div>

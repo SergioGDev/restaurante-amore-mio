@@ -1,0 +1,95 @@
+.container {
+    background-color: var(--color-gris-fondo);
+    text-align: center;
+}
+
+.developer, .redes-sociales, .enlaces-contenido-legal {
+    color: var(--color-texto-blanco);
+}
+
+.superior {
+    color: white;
+}
+
+.icono-restaurante {
+    text-align: center;
+    width: 100%;
+    height: 130px;
+    margin: 30px 0px;
+}
+
+.icono-restaurante img {
+    height: 100%;
+    border-radius: 2%;
+    background-color: white;
+    border: 3px solid var(--color-dorado);
+}
+
+.enlace-legal {
+    margin: 10px 20px;
+    font-size: 14px;
+    color: var(--color-texto-blanco);
+    cursor: pointer;
+    transition: 0.15s all linear;
+}
+
+.enlace-legal:hover {
+    color: var(--color-dorado);
+    transition: 0.15s all linear;
+}
+
+.enlaces-contenido-legal, .redes-sociales {
+    text-align: center;
+}
+
+.enlace-legal, .developer {
+    font-family: 'Cairo', sans-serif;
+}
+
+.developer {
+    background-color: var(--color-negro-fondo);
+    color: var(--color-texto-blanco);
+    font-size: 14px;
+    height: 50px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.enlace-developer, a {
+    color: var(--color-fondo-claro);
+    cursor: pointer;
+    transition: 0.15s all linear;
+    text-decoration: none;
+}
+
+.enlace-developer:hover {
+    transition: 0.15s all linear;
+}
+
+.datos>span {
+    display: block;
+    font-family: 'Cairo', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.datos>span>img {
+    height: 16px;
+    margin-right: 5px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.negrita{
+    font-weight: 900;
+}

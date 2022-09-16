@@ -1,0 +1,55 @@
+.container {
+    box-shadow: 1px 2px 3px var(--tono-box-shadow);
+}
+
+.item-plato{
+    font-family: 'Cairo', sans-serif;
+    color: var(--color-negro-fondo);
+    background-color: white;
+    padding: 10px 0px;
+}
+
+.borde-inferior, .borde-superior, .item-plato {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.borde-superior {
+    height: 10px;
+}
+
+.borde-inferior {
+    height: 10px;
+}
+
+.nombre-plato {
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.descripcion-plato {
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.precio-plato {
+    font-size: 16px;
+    margin-top: 3px;
+    color: var(--color-dorado-oscuro);
+    text-align: right;
+}
+
+.foto-item-plato {
+    width: 100%;
+    border-radius: 100%;
+}
+
+.borde-superior {
+    background-image: linear-gradient(to bottom, transparent, white);
+    height: 5px;
+}
+
+.borde-inferior {
+    background-image: linear-gradient(to bottom, white, transparent);
+    height: 5px;
+}

@@ -24,10 +24,10 @@
             </span>
         </div>
 
-        <div [ngClass]="{'reservar-scrollable': this.scrollable, 'reservar-normal': !this.scrollable}" 
+<!--    <div [ngClass]="{'reservar-scrollable': this.scrollable, 'reservar-normal': !this.scrollable}" 
             fxShow.xs="false" fxShow.sm="false" (click)="openDialog()">
             <span>Reservar</span>
-        </div>
+        </div> -->
 
         <div class="content-boton-menu" [ngClass]="{'display-none': !this.responsive}" (click)="pulsarBotonMenuResponsive()">
             <div class="boton-menu" 
@@ -46,12 +46,12 @@
             (click)="pulsarBotonMenuResponsive()">
             {{ option.text }}
         </span>
-        <span class="toolbar-item-responsive"
+        <!-- <span class="toolbar-item-responsive"
             [ngClass]="{'open': this.menuOpen}" 
             routerLinkActive="link-responsive-selected"
             (click)="openDialog()">
             Reservar
-        </span>
+        </span> -->
 
         <mat-divider [ngClass]="{'display-none': !this.responsive}" ></mat-divider>
 
